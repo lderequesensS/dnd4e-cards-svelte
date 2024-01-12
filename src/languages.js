@@ -1,5 +1,7 @@
-export const fieldLabel = {
-	spanish:{
+const languages = [
+	{
+		idx: 0,
+		languageName: 'Español',
 		language:'Lenguaje',
 		name: 'Nombre',
 		level:'Nivel',
@@ -26,7 +28,9 @@ export const fieldLabel = {
 		},
 		gradient: 'Gradiente',
 	},
-	english:{
+	{
+		idx: 1,
+		languageName: 'English',
 		language:'Language',
 		name: 'Name',
 		level:'Level',
@@ -53,4 +57,5 @@ export const fieldLabel = {
 		},
 		gradient: 'Gradient',
 	},
-}
+]
+export default languages;
