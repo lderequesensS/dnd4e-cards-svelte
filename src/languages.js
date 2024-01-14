@@ -13,19 +13,19 @@ const languages = [
 		icon:'Ícono',
 		add:'Agregar propiedad',
 		property:'Propiedad',
-		types:{
-			0:'A-Voluntad',
-			1:'Encuentro',
-			2:'Diario'
-		},
-		actions: {
-			0: 'Acción estandar',
-			1: 'Acción de movimiento',
-			2: 'Acción menor',
-			3: 'Acción gratuita',
-			4: 'Acción inmediata',
-			5: 'Acción de oportunidad'
-		},
+		types:[
+			'A-Voluntad',
+			'Encuentro',
+			'Diario'
+		],
+		actions: [
+			'Acción estandar',
+			'Acción de movimiento',
+			'Acción menor',
+			'Acción gratuita',
+			'Acción inmediata',
+			'Acción de oportunidad'
+		],
 		gradient: 'Gradiente',
 	},
 	{
@@ -42,19 +42,19 @@ const languages = [
 		icon:'Icon',
 		add:'Add property',
 		property:'Property',
-		types:{
-			0:'At-Will',
-			1:'Encounter',
-			2:'Daily'
-		},
-		actions: {
-			0: 'Standar action',
-			1: 'Movement action',
-			2: 'Minor action',
-			3: 'Free action',
-			4: 'Immediate action',
-			5: 'Opportunity action'
-		},
+		types:[
+			'At-Will',
+			'Encounter',
+			'Daily'
+		],
+		actions: [
+			'Standar action',
+			'Movement action',
+			'Minor action',
+			'Free action',
+			'Immediate action',
+			'Opportunity action'
+		],
 		gradient: 'Gradient',
 	},
 ]

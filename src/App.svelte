@@ -2,10 +2,21 @@
 	import Title from "./title.svelte";
 	import languages from "./languages.js";
 	import LanguageSelector from "./languageSelector.svelte";
+	import Input from "./input.svelte";
+	import Viewer from "./viewer.svelte";
 
 	let selectedLang = 0; // Spanish as default
 	let curLang = languages[selectedLang];
-	let input; // Objeto??
+	let input = {
+		name: '',
+		level: '',
+		type: curLang.types[0],
+		action: curLang.actions[0],
+		description: '',
+		range: '',
+		keywords: '',
+		properties: [''],
+	}
 
 </script>
 
@@ -13,14 +24,14 @@
 <main>
 	<Title />
 
-	<LanguageSelector {selectedLang} {curLang}/> <!-- Check if is really necesary this props -->
+	<LanguageSelector {selectedLang} bind:curLang={curLang}/>
 
 	<div class="grid grid-cols-2">
 		<div>
-			Input
+			<Input bind:input={input} {curLang}/>
 		</div>
 		<div>
-			Viewer
+			<Viewer viewer={input} {curLang}/>
 		</div>
 	</div>
 </main>
