@@ -9,7 +9,7 @@ const languages = [
 		keywords:'♦ Palabras clave',
 		action:'Acción',
 		range:'Rango',
-		description:'Descripcion',
+		description:'Descripción',
 		icon:'Ícono',
 		add:'Agregar propiedad',
 		property:'Propiedad',
