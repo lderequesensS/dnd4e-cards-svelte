@@ -30,7 +30,8 @@
 	<div> <!-- Maybe there is a beautiful way to make the 2nd line to start after the rhombus -->
 			{viewer.type + " ♦ " + viewer.keywords}
 	</div>
-	<p> {viewer.action + " " + viewer.range} </p>
+	<!-- I divided this just to not think about sanitization -->
+	<p> {viewer.action}{@html "&emsp;&emsp; "}{viewer.range} </p>
 
 	<div>
 		{#each viewer.properties as property, idx}
