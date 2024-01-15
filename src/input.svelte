@@ -9,7 +9,6 @@
 	}
 
 	function removeProperty(idx) {
-		console.log(idx)
 		input.properties.splice(idx, 1)
 		input.gradients.splice(idx, 1)
 		input = input
@@ -129,15 +128,17 @@
 			<label for="property-{idx}"
 				class="absolute left-0 -top-4 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-0.5 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-600 transition-all"> {curLang.property + " " + (idx + 1)}
 			</label>
-			<div>
-				<button class="col-span-1" on:click={() => removeProperty(idx)}>
-					This is button
+			<div class="flex justify-center">
+				<button on:click={() => removeProperty(idx)} class="align-middle">
+					<img src="/icons8-trash-30.svg" alt="delete" >
 				</button>
 			</div>
-			<input id="checkbox-{idx}" type="checkbox" bind:checked={input.gradients[idx]} />
-			<label for="checkbox-{idx}"
-				class="absolute right-0 -top-4 text-gray-600 text-sm transition-all"> {curLang.gradient}
-			</label>
+			<div class="flex justify-end">
+				<input id="checkbox-{idx}" type="checkbox" bind:checked={input.gradients[idx]} class="h-5 w-5 align-middle" />
+				<label for="checkbox-{idx}"
+				class="absolute right-0 -top-5 text-gray-600 text-sm transition-all"> {curLang.gradient}
+				</label>
+			</div>
 		</div>
 	{/each}
 
