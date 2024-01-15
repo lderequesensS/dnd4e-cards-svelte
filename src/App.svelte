@@ -16,6 +16,7 @@
 		range: '',
 		keywords: '',
 		properties: [''],
+		gradients: [false],
 	}
 
 </script>
@@ -31,7 +32,7 @@
 			<Input bind:input={input} {curLang}/>
 		</div>
 		<div>
-			<Viewer viewer={input}/>
+			<Viewer viewer={input} {curLang}/>
 		</div>
 	</div>
 </main>
