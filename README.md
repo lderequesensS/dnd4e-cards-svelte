@@ -6,6 +6,9 @@ This is heavily inspired in https://tools.omnichron.net/dnd/pow.html, for the mo
 ```bash
 npm run dev -- --open
 ```
+# Online
+
+https://dnd4e-cards.netlify.app
 
 # Why with Svelte now?
 1. I wanted to check out how Svelte is used
