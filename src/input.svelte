@@ -1,6 +1,19 @@
 <script>
 	export let input;
 	export let curLang;
+
+	function addProperty() {
+		input.properties.push('');
+		input.gradients.push(false);
+		input = input;
+	}
+
+	function removeProperty(idx) {
+		console.log(idx)
+		input.properties.splice(idx, 1)
+		input.gradients.splice(idx, 1)
+		input = input
+	}
 </script>
 
 
@@ -107,21 +120,37 @@
 		<div class="col-span-2 h-3">
 		</div>
 
-		<!-- Delete button -->
-		<div class="relative bg-red-400 col-span-2">
+		<div class="relative col-span-2 grid grid-cols-5">
 			<input
 			id="property-{idx}"
-			class="peer border-b focus:outline-none focus:border-red-600 transition-colors min-w-[400px]"
+			class="peer border-b focus:outline-none focus:border-red-600 transition-colors col-span-3"
 			placeholder=" "
 			bind:value={input.properties[idx]}/>
 			<label for="property-{idx}"
-				class="absolute left-0 -top-4 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-0.5 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-600 transition-all"> {curLang.property}
+				class="absolute left-0 -top-4 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-0.5 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-600 transition-all"> {curLang.property + " " + (idx + 1)}
 			</label>
-			<input type="checkbox" bind:checked={input.gradients[idx]}/>
+			<div>
+				<button class="col-span-1" on:click={() => removeProperty(idx)}>
+					This is button
+				</button>
+			</div>
+			<input id="checkbox-{idx}" type="checkbox" bind:checked={input.gradients[idx]} />
+			<label for="checkbox-{idx}"
+				class="absolute right-0 -top-4 text-gray-600 text-sm transition-all"> {curLang.gradient}
+			</label>
 		</div>
 	{/each}
 
-	<!-- Add button to add new properties -->
+	<div class="col-span-2 h-3">
+	</div>
+
+	<div class="col-span-2 grid grid-cols-3">
+		<div>
+		</div>
+		<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" on:click={addProperty}>
+			{curLang.add}
+		</button>
+	</div>
 
 </div>
 
