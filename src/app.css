@@ -51,3 +51,15 @@ body {
 	font-family: DnDVecna;
 	font-size: 25px;
 }
+
+@font-face {
+	font-family: DnDTools;
+	src: url('fonts/4etools_symbols.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.font-tool {
+	font-family: DnDTools;
+	font-size:25px;
+}

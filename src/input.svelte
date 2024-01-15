@@ -21,7 +21,7 @@
 		<input
 			id="name"
 			class="peer w-full border-b focus:outline-none focus:border-red-600 transition-colors"
-			placeholder=" " 
+			placeholder=" "
 			bind:value={input.name}/>
 		<label for="name"
 			class="absolute left-0 -top-4 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-0.5 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-600 transition-all">{curLang.name}
@@ -31,10 +31,40 @@
 		<input
 			id="level"
 			class="peer w-full border-b focus:outline-none focus:border-red-600 transition-colors"
-			placeholder=" " 
+			placeholder=" "
 			bind:value={input.level}/>
 		<label for="level"
 			class="absolute left-0 -top-4 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-0.5 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-600 transition-all">{curLang.level}
+		</label>
+	</div>
+
+	<div class="col-span-2 h-3">
+	</div>
+
+	<div class="relative">
+		<select id="icon1"
+			class="peer w-full border-b focus:outline-none focus:border-red-600 transition-colors bg-white text-center"
+			bind:value={input.icon1}
+		>
+			{#each curLang.iconsLetters as letter, idx}
+				<option value={letter}>{curLang.iconsDescriptions[idx]}</option>
+			{/each}
+		</select>
+		<label for="icon1"
+			class="absolute left-0 -top-4 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-0.5 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-600 transition-all"> {curLang.icon + " " + 1}
+		</label>
+	</div>
+	<div class="relative">
+		<select id="icon2"
+			class="peer w-full border-b focus:outline-none focus:border-red-600 transition-colors bg-white text-center"
+			bind:value={input.icon2}
+		>
+			{#each curLang.iconsLetters as letter, idx}
+				<option value={letter}>{curLang.iconsDescriptions[idx]}</option>
+			{/each}
+		</select>
+		<label for="icon2"
+			class="absolute left-0 -top-4 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-0.5 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-gray-600 transition-all"> {curLang.icon + " " + 2}
 		</label>
 	</div>
 

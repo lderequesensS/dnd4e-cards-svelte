@@ -19,7 +19,7 @@ const languages = [
 			'Diario'
 		],
 		actions: [
-			'Acción estandar',
+			'Acción estándar',
 			'Acción de movimiento',
 			'Acción menor',
 			'Acción gratuita',
@@ -27,6 +27,30 @@ const languages = [
 			'Acción de oportunidad'
 		],
 		gradient: 'Gradiente',
+		iconsLetters: [
+			'a',
+			'c',
+			'm',
+			'r',
+			'A',
+			'C',
+			'M',
+			'R',
+			'@',
+			'',
+		],
+		iconsDescriptions:[
+			'Ataque de área básico',
+			'Ataque cercano básico',
+			'Ataque c/c básico',
+			'Ataque a distancia básico',
+			'Ataque de área',
+			'Ataque cercano',
+			'Ataque c/c',
+			'Ataque a distacia',
+			'Aura',
+			'Ninguno',
+		]
 	},
 	{
 		idx: 1,
@@ -56,6 +80,30 @@ const languages = [
 			'Opportunity action'
 		],
 		gradient: 'Gradient',
+		iconsLetters: [
+			'a',
+			'c',
+			'm',
+			'r',
+			'A',
+			'C',
+			'M',
+			'R',
+			'@',
+			'',
+		],
+		iconsDescriptions:[
+			'Area basic attack',
+			'Close basic attack',
+			'Melee basic attack',
+			'Ranged basic attack',
+			'Area attack',
+			'Close attack',
+			'Melee attack',
+			'Ranged attack',
+			'Aura',
+			'None',
+		]
 	},
 ]
 export default languages;

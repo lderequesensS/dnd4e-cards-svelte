@@ -17,6 +17,8 @@
 		keywords: '',
 		properties: [''],
 		gradients: [false],
+		icon1: 'a',
+		icon2: '',
 	}
 
 </script>
@@ -27,7 +29,7 @@
 
 	<LanguageSelector {selectedLang} bind:curLang={curLang}/>
 
-	<div class="grid grid-cols-1 lg:grid-cols-2">
+	<div class="grid grid-cols-1 lg:grid-cols-2 space-x-2 space-y-3">
 		<div>
 			<Input bind:input={input} {curLang}/>
 		</div>
